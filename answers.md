@@ -5,3 +5,5 @@
 5. The boxbug's square will always be different because the side-length can be changed by the interface.
 6. Yes if the bug collides with a wall or another bug it will turn.
 7. The number of steps will only be zero at the beginning of the code, before anything has moved.
+
+exercises. The bug makes 2 circles overlapped like a venn diagram.
