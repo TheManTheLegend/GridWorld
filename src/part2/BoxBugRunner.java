@@ -33,9 +33,12 @@ public class BoxBugRunner {
 		ActorWorld world = new ActorWorld();
 		BoxBug alice = new BoxBug(6);
 		alice.setColor(Color.ORANGE);
-		BoxBug bob = new BoxBug(3);
+		CircleBug bob = new CircleBug(3);
+		SprialBug nik = new SprialBug(6);
+		nik.setColor(Color.BLUE);
 		world.add(new Location(7, 8), alice);
 		world.add(new Location(5, 5), bob);
+		world.add(new Location(5, 1), nik);
 		world.show();
 	}
 }

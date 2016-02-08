@@ -49,8 +49,12 @@ public class BoxBug extends Bug {
 			steps++;
 		} else {
 			turn();
+			turn();
 			
 			steps = 0;
 		}
 	}
 }
+
+
+
