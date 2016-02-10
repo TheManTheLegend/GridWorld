@@ -6,4 +6,6 @@
 6. Yes if the bug collides with a wall or another bug it will turn.
 7. The number of steps will only be zero at the beginning of the code, before anything has moved.
 
-exercises. The bug makes 2 circles overlapped like a venn diagram.
+exercises. 
+1. The bug only needs to turn once when it can move further.
+2. To add another bug i would define what kind of bug it is and give it a name and sidelength. I would then add it to the world wherever I like.
