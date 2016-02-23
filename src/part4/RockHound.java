@@ -3,40 +3,25 @@ package part4;
 import java.util.ArrayList;
 
 import info.gridworld.actor.Actor;
+import info.gridworld.actor.Critter;
 import info.gridworld.grid.Grid;
 import info.gridworld.grid.Location;
 
-public class ChameleonKid extends ChameleonCritter{
-
+public class RockHound extends Critter{
 	public ArrayList<Actor> getActors() {
 		ArrayList<Actor> actors = new ArrayList<Actor>();
-		int[] dirs = { Location.AHEAD, Location.HALF_CIRCLE};
+		int[] dirs = { Location.AHEAD, Location.HALF_LEFT, Location.HALF_RIGHT };
 		for (Location loc : getLocationsInDirections(dirs)) {
 			Actor a = getGrid().get(loc);
-			if (a != null)
-				actors.add(a);
+			if (a != null){
+				a.removeSelfFromGrid();
+			
+			}
 		}
 
 		return actors;
 	}
 	
-	public void processActors(ArrayList<Actor> actors) {
-		int n = actors.size();
-		if (n == 0){
-			setColor(getColor().darker());
-			return;
-		}
-		int r = (int) (Math.random() * n);
-
-		Actor other = actors.get(r);
-		setColor(other.getColor());
-	}
-	
-	public void makeMove(Location loc) {
-		setDirection(getLocation().getDirectionToward(loc));
-		super.makeMove(loc);
-	}
-
 	public ArrayList<Location> getLocationsInDirections(int[] directions) {
 		ArrayList<Location> locs = new ArrayList<Location>();
 		Grid gr = getGrid();
@@ -49,5 +34,4 @@ public class ChameleonKid extends ChameleonCritter{
 		}
 		return locs;
 	}
-
 }
