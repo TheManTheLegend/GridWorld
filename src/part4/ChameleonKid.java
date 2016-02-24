@@ -32,11 +32,6 @@ public class ChameleonKid extends ChameleonCritter{
 		setColor(other.getColor());
 	}
 	
-	public void makeMove(Location loc) {
-		setDirection(getLocation().getDirectionToward(loc));
-		super.makeMove(loc);
-	}
-
 	public ArrayList<Location> getLocationsInDirections(int[] directions) {
 		ArrayList<Location> locs = new ArrayList<Location>();
 		Grid gr = getGrid();

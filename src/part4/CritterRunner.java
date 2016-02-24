@@ -19,6 +19,7 @@
 
 package part4;
 
+import info.gridworld.actor.Actor;
 import info.gridworld.actor.ActorWorld;
 import info.gridworld.actor.Critter;
 import info.gridworld.actor.Flower;
@@ -41,13 +42,14 @@ public class CritterRunner {
 //		world.add(new Location(5, 5), new Flower(Color.PINK));
 //		world.add(new Location(1, 5), new Flower(Color.RED));
 //		world.add(new Location(7, 2), new Flower(Color.YELLOW));
-		for (int i = 0; i<8 ; i++){
+		
+		for (int i = 0; i<10 ; i++){
 			for(int n = 0; n < 9; n++){
 				world.add(new Location(i, n), new Critter());
 			}
 		}
+		world.add(new Location(9, 9), new BusterCritter(3));
 		
-		world.add(new Location(7, 8), new BusterCritter());
 		world.show();
 	}
 }
