@@ -36,19 +36,15 @@ public class CritterRunner {
 	
 	public static void main(String[] args) {
 		ActorWorld world = new ActorWorld();
-		world.add(new Location(7, 8), new Rock());
-		world.add(new Location(3, 3), new Rock());
-//		world.add(new Location(2, 8), new Flower(Color.BLUE));
-//		world.add(new Location(5, 5), new Flower(Color.PINK));
-//		world.add(new Location(1, 5), new Flower(Color.RED));
-//		world.add(new Location(7, 2), new Flower(Color.YELLOW));
 		
-		for (int i = 0; i<10 ; i++){
-			for(int n = 0; n < 9; n++){
-				world.add(new Location(i, n), new Critter());
-			}
-		}
-		world.add(new Location(9, 9), new BusterCritter(3));
+		world.add(new Location(2, 8), new Flower(Color.BLUE));
+		world.add(new Location(5, 5), new Flower(Color.PINK));
+		world.add(new Location(1, 5), new Flower(Color.RED));
+		world.add(new Location(7, 2), new Flower(Color.YELLOW));
+		world.add(new Location(6, 5), new KingCrab());
+		world.add(new Location(3, 3), new Critter());
+		world.add(new Location(1, 2), new Critter());
+		world.add(new Location(9, 9), new Critter());
 		
 		world.show();
 	}

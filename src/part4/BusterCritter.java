@@ -24,6 +24,7 @@ public class BusterCritter extends Critter{
 		
 			locs = getGrid().getOccupiedAdjacentLocations(getLocation());
 			for(int i = 0; i < locs.size(); i++){
+				
 				locsss = getGrid().getOccupiedAdjacentLocations(locs.get(i));
 			}
 		
