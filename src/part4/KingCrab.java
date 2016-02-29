@@ -27,7 +27,7 @@ public class KingCrab extends CrabCritter {
 					a.moveTo(new Location(a.getLocation().getRow() + 1, a.getLocation().getCol()));
 				}
 				else{
-					getGrid().remove(a.getLocation());
+					a.removeSelfFromGrid();
 				}
 				
 			}
